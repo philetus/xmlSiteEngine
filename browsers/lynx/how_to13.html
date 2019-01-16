@@ -1,0 +1,57 @@
+
+<html>
+<head>
+<title>[ xmlSE . how to . create a record template ]</title>
+<meta http-equiv="expires" content="-1">
+<meta http-equiv= "pragma" CONTENT="no-cache">
+<meta name="ROBOTS" content="ALL">
+<meta name="description" content="xml site engine: liberty! equality! fraternity! web publishing!">
+<meta name="KEYWORDS" content="xml web publishing">
+</head>
+<body bgcolor="#000000" text="#00FF00" link="#00FF00" alink="#00FF00" vlink="#00CC00">
+<font face="courier new, courier, monotype">
+
+<p><font size="+3">[ <a href="./">xmlSE</a> . </font><font size="+2"><a href="how_to.html">how to</a> . </font><font size="+1"> create a record template ]</font>
+
+<a href="../../system/cgi-bin/edit.cgi">edit</a>
+
+
+</p>
+
+<blockquote>Record templates control the appearance of category record pages. When you <a href="how_to15.html">create a new category</a>, you also need to create a record template and <a href="how_to12.html">create an index template</a> for each browser version of your site.<br />
+<br />
+Record templates use the tags described in &#39;<a href="how_to6.html">edit an html template</a> &#39;.<br />
+<br />
+If you want to display who last edited the record, and when, you can access a record&#39;s &#39;last_edited&#39; field with the data and if tags. To print the name of the person who last edited the record, use &#39;&lt;data field=&quot;last_edited.by&quot; /&gt;&#39;. The month, date and year in mm.dd.yyyy format is &#39;&lt;data field=&quot;last_edited.month&quot; /&gt;.&lt;data field=&quot;last_edited.day&quot; /&gt;.&lt;data field=&quot;last_edited.year&quot; /&gt;&#39;.<br />
+<br />
+To display references to other records that mention this record, use the &#39;&lt;reference_category&gt;...&lt;/reference_category&gt;&#39; and &#39;&lt;reference&gt;...&lt;/reference&gt;&#39; tags.<br />
+<br />
+The contents of the reference_category tags are repeated for each category of references. To display the name of the category, use &#39;&lt;data field=&quot;category&quot; /&gt;&#39; inside the reference_category tags.<br />
+<br />
+The reference tags go inside the reference_category tags,  and their contents are repeated for each reference in each category. The text of the reference, defined when you <a href="how_to22.html">create a reference template</a>, can be accessed using the &#39;&lt;data field=&quot;reference&quot; /&gt;&#39; tag.</blockquote>
+
+<ul>authors: Mike Weller</ul>
+
+
+
+
+<ul>how_to:
+<ul>
+
+<li><a href="../../browsers/lynx/how_to15.html">create a new category</a>
+<ul>To create a new category, go to the configure site...</ul></li>
+
+
+<li><a href="../../browsers/lynx/how_to12.html">create an index template</a>
+<ul>Index templates control the appearance of category...</ul></li>
+
+</ul></ul>
+
+
+<p>last updated 2.28.2002
+by <a href="person1.html">administrator</a>
+</p>
+
+</font>
+</body>
+</html>

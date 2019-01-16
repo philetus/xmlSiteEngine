@@ -1,0 +1,53 @@
+<!ELEMENT subcategory EMPTY>
+<!ATTLIST subcategory
+	name	CDATA	#IMPLIED
+	rank	CDATA	#IMPLIED
+>
+
+<!ELEMENT bio (#PCDATA)>
+
+<!ELEMENT web_page EMPTY>
+<!ATTLIST web_page
+	url	CDATA	#IMPLIED
+>
+
+<!ELEMENT picture EMPTY>
+<!ATTLIST picture
+	url	CDATA	#IMPLIED
+>
+
+<!ELEMENT fax EMPTY>
+<!ATTLIST fax
+	suffix	CDATA	#IMPLIED
+	prefix	CDATA	#IMPLIED
+	area_code	CDATA	#IMPLIED
+>
+
+<!ELEMENT last_edited EMPTY>
+<!ATTLIST last_edited
+	month	CDATA	#IMPLIED
+	day	CDATA	#IMPLIED
+	by	CDATA	#IMPLIED
+	year	CDATA	#IMPLIED
+>
+
+<!ELEMENT contact (address,phone,fax)>
+<!ATTLIST contact
+	email	CDATA	#IMPLIED
+>
+
+<!ELEMENT person (subcategory,last_edited,web_page,contact,bio,picture)>
+<!ATTLIST person
+	record_number	CDATA	#IMPLIED
+	name	CDATA	#IMPLIED
+>
+
+<!ELEMENT address (#PCDATA)>
+
+<!ELEMENT phone EMPTY>
+<!ATTLIST phone
+	suffix	CDATA	#IMPLIED
+	prefix	CDATA	#IMPLIED
+	area_code	CDATA	#IMPLIED
+>
+

@@ -1,0 +1,365 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE record SYSTEM "how_to.dtd">
+
+<record>
+
+<how_to topic="add a new person" record_number="how_to0">
+<subcategory rank="1" name="use" />
+<text>To add a new person, unless you plan on making a category other than people the user category, go to the people index page. Click on the new person link that defaults to the top right corner of the page.
+
+If you are just getting started, enter &#39;administrator&#39; as both your name and password, otherwise enter your name and password at the prompt.
+
+If your name and password are accepted you should see a form with a series of fields. You must enter at least the person&#39;s name. Enter any other information you want to add at this time, more can be added later. When you are finished hit the &#39;create&#39; button at the bottom of the page.
+
+When you see the build site page hit the &#39;build&#39; button to build the site.
+
+When the site is rebuilt, you should be returned to the people index page, and the person you added should now be listed. If they are not listed, try reloading the page in your browser.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+
+
+
+
+
+<how_to topic="build the site" record_number="how_to1">
+<subcategory rank="1" name="use" />
+<text>Once you create a new record, edit a record, delete a record, or configure the site, you should get a screen inviting you to rebuild the site, with a &#39;build&#39; button. At this point, you have updated the xml files where the xml site engine stores information, but the changes you made will not be reflected in the html files you see when browsing the site.
+
+When you hit the build button, the xml site engine will cross-reference the updated xml records, and then write new html files with the current html templates. Depending on the amount of information on your site, building the site can take several minutes. If you have several changes to make, it is not necessary to build the site after each change. You can make all the changes you have to make and then rebuild the site once.
+
+Sometimes your browser will have the old page cached, so you may have to reload the page or clear your browser&#39;s cache before you see the updated version.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="24" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+
+
+
+<how_to topic="go to the configure site page" record_number="how_to2">
+<subcategory rank="10" name="administer" />
+<text>To find the configure site page, either go to a category index page and hit the link to create a new record, or go to a record page and edit a record.
+
+Enter your name and password when requested.
+
+You should see either a new record form, or an edit record form. In the upper right corner of the browser there should be a &#39;configure site&#39; link.
+
+Follow the link, and enter your name and password again, and you should be at the configure site page.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+
+
+<how_to topic="create a new record" record_number="how_to3">
+<subcategory rank="1" name="use" />
+<text>To add a new record to a category, go to the category index page and hit the &#39;new&#39; link.
+
+Enter your name and password.
+
+You should see a page with a series of blank fields. Fill out as much information as you are prepared to, you can come back and add more later.
+
+When you are finished, hit the &#39;create&#39; button at the bottom of the page, and the new record will immediately be written to the xml file for that category.
+
+You should then be prompted to build the site.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="26" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="edit a record" record_number="how_to4">
+<subcategory rank="1" name="use" />
+<text>To add more information to a record, or to make changes, go to the record, and follow the &#39;edit&#39; link.
+
+Enter your name and password when prompted.
+
+You should see a series of fields containing the information that has been entered for the record so far.
+
+When you are finished editing the record, hit the &#39;update&#39; button on the bottom of the page. The changes you have made will immediately be written to the category xml file, but will not be reflected on the site until you rebuild the site.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="delete a record" record_number="how_to5">
+<subcategory rank="1" name="use" />
+<text>To remove a record, go to the page of the record you want to remove, and follow the &#39;edit&#39; link.
+
+Enter your name and password when prompted.
+
+At the bottom of the edit form page, there should be a &#39;delete&#39; button next to the &#39;update&#39; button. Hit the delete button.
+
+The record is immediately erased from the category xml file, but will continue to be linked to from the category index page until you build the site again.
+
+Even after you rebuild the site, any html pages that have been generated from the record will remain in the browser directories, but the xml site engine will no longer generate links to the page from elsewhere on the site.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="26" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="edit an html template" record_number="how_to6">
+<subcategory name="administer" />
+<text>To edit an html template, go to the configure site page. Under the &#39;browsers&#39; heading there should be a list of browser versions of the site, and each browser version should have a list of templates. When you find the template you want to edit, follow the &#39;edit&#39; link next to the name of the template.
+
+Enter your name and password at the prompt.
+
+The html field should contain the existing template for the page. The template is plain html, except that lines beginning with &#39;#&#39; are comments, and there are four special template tags:
+
+&#39;&lt;header&gt;&#39;, &#39;&lt;header title=&quot;my web site&quot; /&gt;&#39; - the header tag is replaced with the contents of the browser header field, and if the header tag contains &#39;title=&quot;my web site&quot;&#39;, and the browser header field contains a &#39;&lt;title /&gt;&#39; tag, it is replaced with &#39;&lt;title&gt;my web site&lt;/title&gt;&#39;
+
+&#39;&lt;footer /&gt;&#39; - the footer tag is replaced with the contents of the browser footer field
+
+&#39;&lt;data field=&quot;picture.url&quot; /&gt;&#39; - the data tag is replaced with the contents of the field named in the &#39;field&#39; attribute, where fields are separated from subfields with a &#39;.&#39;. For example, if you want to put a person&#39;s picture on the people record page, and the person record has a &#39;picture&#39; field with an &#39;url&#39; subfield, you code the image like this: &#39;&lt;img url=&quot;&lt;data field=&quot;picture.url&quot; /&gt;&quot; /&gt;&#39;. If the field potentially contains a lot of text, and you only want to show the beginning of it, use the &#39;length&#39; attribute, that number of characters from the beginning of the field will replace the tag instead of the entire contents: &#39;&lt;data field=&quot;text&quot; length=&quot;100&quot; /&gt;&#39;.
+
+&#39;&lt;if field=&quot;picture.url&quot;&gt;...&lt;/if&gt;&#39; - the if tag allows you to test for empty fields and only print relevant parts of the template. If in the above example, you didn&#39;t want to have a broken image when a person hadn&#39;t provided a picture, you would wrap the image tag in if tags: &#39;&lt;if field=&quot;picture.url&quot;&gt;&lt;img url=&quot;&lt;data field=&quot;picture.url&quot; /&gt;&quot; /&gt;&lt;/if&gt;&#39;. They can be nested, in which case the outside tags are tested first.
+
+When you are finished, hit the &#39;update&#39; button, and the updated template will be written to the &#39;browser_templates.xml&#39; file. If the template is for the index page, or for a category index or record, the changes will not be reflected until you build the site again.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+
+
+
+<how_to topic="control the appearance of the site" record_number="how_to7">
+<subcategory name="administer" />
+<text>The xml site engine is set up to allow several different versions of the site to be built from one set of xml data files, in order to accommodate different browsers. Every time a web browser requests a page from a web site, it identifies itself with a short text message called the user-agent string. When you create a new browser, or edit a browser, you can provide a regular expression for that version of the site, and when a web browser requests a page from the site, it is served the version that matches its user-agent string.
+
+Each browser version has a set of html templates, that define the appearance of the pages. Each browser can also have a header and footer, so that html that is shared by all the templates can be controlled from one place, when you edit a browser.
+
+Each browser needs an &#39;index&#39; home page template, a series of templates for pages that are generated by scripts, like the form page and the password page, and an index, record and reference template for each category. The index template lists all the records in a category, a record template is printed for each record, and the reference template controls the appearance of references to the record from other records and search results. You can edit an html template to change the appearance of an existing page. When you create a new category you need to create a new html template for its index and record pages.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+
+
+
+
+<how_to topic="link to a record" record_number="how_to8">
+<subcategory rank="1" name="use" />
+<text>If you mention the name of a record in the text of another record, the name of the record will be automatically converted into a link by xml site engine, and a reference to the page containing the link will be added to the record whose name was mentioned.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="link to an url" record_number="how_to9">
+<subcategory rank="1" name="use" />
+<text>To link to an url, just type the url in the text of a record, starting with &#39;http://&#39;. The xml site engine will automatically build the url into a link.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+<how_to topic="change your password" record_number="how_to10">
+<subcategory rank="1" name="use" />
+<text>To change your password, go to your page. Everyone who has a password should have a page. Follow the change password link next to the edit link.
+
+You should see a page with four fields. Enter your name exactly as it appears on your page in the first field. In the next field put your current password. If this is the first time you have changed your password, your password should be the same as your name. Then enter what you want your password to be in the next to fields.
+
+If your password is successfully changed, you should be returned to the home page. If you get a blank change password form, then it didn&#39;t work.
+
+If it didn&#39;t work, make sure you enter your new password the same in both the new password and confirm password fields, and that you entered your name exactly as it appears on your page.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="26" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="create a new static template" record_number="how_to11">
+<subcategory name="administer" />
+<text>If you would like to add a page to the site that is not a record or index page, such as a page with contact information or something of that sort, you can create a new html template. Instead of calling it &#39;record&#39; or &#39;index&#39; give it a descriptive name with no spaces or special characters, for example &#39;contact&#39; for a contact information page. When you build the site, the html in the template will be written to a file named &#39;contact.html&#39;. You could then put a link to contact.html in the index template.
+
+The advantage of using a template over just sticking a file in one of the browser directories is that you can use the header and footer tags to maintain the appearance of the browser version of the site, and browser-wide changes made when you edit a browser will be applied to static pages.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="4" by="administrator" year="2002" />
+</how_to>
+
+
+<how_to topic="create an index template" record_number="how_to12">
+<subcategory name="administer" />
+<text>Index templates control the appearance of category index pages. When you create a new category, you also need to create an index template and create a record template for each browser version of your site.
+
+Index templates use the tags described in &#39;edit an html template&#39;, as well as &#39;&lt;subcategory&gt;...&lt;/subcategory&gt;&#39; and &#39;&lt;record&gt;...&lt;/record&gt;&#39; tags to indicate which portion of the template should be repeated for each subcategory, and for each record.
+
+Inside the &#39;&lt;subcategory&gt;...&lt;/subcategory&gt;&#39; tags, you can use &#39;&lt;data field=&quot;subcategory&quot; /&gt;&#39; tags to get the name of the subcategory and &#39;&lt;if field=&quot;subcategory&quot;&gt;...&lt;/if&gt;&#39; tags to only include a portion of the template when the subcategory has a name (the default subcategory contains all the records with a blank subcategory field and has no name). The contents of the subcategory tag will be repeated for each subcategory.
+
+Inside the &#39;&lt;record&gt;...&lt;/record&gt;&#39; tags you can use data and if tags to access the fields of each record. The contents of the record tag are repeated for each record in the category. When you edit a category, you can control which method is used to sort the records within a subcategory and also invert the order.
+
+To allow people to create new records for this category, you need to include the new record link, &#39;&lt;a href=&quot;../../system/cgi-bin/new.cgi&quot;&gt;new&lt;/a&gt;&#39;. The new record script will extract the category that the record is to be added to from the url of the page the link is on.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+<how_to topic="create a record template" record_number="how_to13">
+<subcategory name="administer" />
+<text>Record templates control the appearance of category record pages. When you create a new category, you also need to create a record template and create an index template for each browser version of your site.
+
+Record templates use the tags described in &#39;edit an html template &#39;.
+
+If you want to display who last edited the record, and when, you can access a record&#39;s &#39;last_edited&#39; field with the data and if tags. To print the name of the person who last edited the record, use &#39;&lt;data field=&quot;last_edited.by&quot; /&gt;&#39;. The month, date and year in mm.dd.yyyy format is &#39;&lt;data field=&quot;last_edited.month&quot; /&gt;.&lt;data field=&quot;last_edited.day&quot; /&gt;.&lt;data field=&quot;last_edited.year&quot; /&gt;&#39;.
+
+To display references to other records that mention this record, use the &#39;&lt;reference_category&gt;...&lt;/reference_category&gt;&#39; and &#39;&lt;reference&gt;...&lt;/reference&gt;&#39; tags.
+
+The contents of the reference_category tags are repeated for each category of references. To display the name of the category, use &#39;&lt;data field=&quot;category&quot; /&gt;&#39; inside the reference_category tags.
+
+The reference tags go inside the reference_category tags,  and their contents are repeated for each reference in each category. The text of the reference, defined when you create a reference template, can be accessed using the &#39;&lt;data field=&quot;reference&quot; /&gt;&#39; tag.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="create a new browser" record_number="how_to14">
+<subcategory name="administer" />
+<text>If you would like to have a different set of templates to accomodate different browsers, you can create a new browser. Go to the configure site page and follow the &#39;new&#39; link next to the browsers heading.
+
+Enter your name and password at the prompt.
+
+The name of this browser version goes in the &#39;name&#39; field and should have no spaces or special characters.
+
+The &#39;user_agent&#39; field is what determines which browser version is served to a viewer&#39;s browser. In the &#39;regexp&#39; subfield, you can put a perl regular expression that matches the user-agent string of the browsers you want this version served to. If you want this browser version to be served to viewers whose browsers don&#39;t match any other browser version, put &#39;true&#39; in the &#39;default&#39; field.
+
+In the &#39;header&#39; and &#39;footer&#39; fields, you can provide html that will be inserted in templates in this browser version when there is a &#39;&lt;header /&gt;&#39; or &#39;&lt;footer /&gt;&#39; tag. If you put a &#39;&lt;title /&gt;&#39; tag in the header, and use the &#39;&lt;header title=&quot;my web page&quot; /&gt;&#39; format in the template, then the &#39;&lt;title /&gt;&#39; tag will be replaced with &#39;&lt;title&gt;my web page&lt;/title&gt;&#39;.
+
+When you hit the &#39;create&#39; button, a new template xml file will be created for the new browser version by copying the template file of the default version to a new file. You can then edit the templates or create new templates as necessary.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+<how_to topic="create a new category" record_number="how_to15">
+<subcategory name="administer" />
+<text>To create a new category, go to the configure site page. Follow the &#39;new&#39; link next to the category heading.
+
+Enter your name and password at the prompt.
+
+In the &#39;name&#39; field, enter the name of the new category. The name should not include any spaces or special characters.
+
+The &#39;member&#39; field has three subfields, &#39;type&#39;, &#39;title&#39; and &#39;user&#39;. The &#39;type&#39; subfield is required. Enter the singular name of a member of the category. For example, a member of the people category is a person. If you want records in this category to have titles, enter the name of the title in the &#39;title&#39; subfield. The title for a person record is &#39;name&#39;. Enter &#39;true&#39; in the &#39;user&#39; subfield if records in this category represent users that should have passwords to access the site.
+
+The &#39;sort&#39; field controls the way records in the category are sorted. Enter the field whose contents you want to sort the records by in the &#39;field&#39; subfield. In the &#39;type&#39; field you should enter which sorting algorithm you would like to use. The options are &#39;cmp&#39;, &#39;last&#39; or &#39;date&#39;. The &#39;cmp&#39; algorithm compares the contents of the field alphabetically or numerically. The &#39;last&#39; algorithm is the same as &#39;cmp&#39; except it compares only the last word in the string. The &#39;date&#39; algorithm sorts the records by date, when the field mentioned in &#39;field&#39; has the attributes &#39;month&#39;, &#39;day&#39;, and &#39;year&#39; and they are in &#39;mm.dd.yyyy&#39; format. So if you wanted to sort the people category by last name you would put &#39;name&#39; in the &#39;field&#39; subfield and &#39;last&#39; in the &#39;type&#39; subfield. To sort people by their phone area code you put &#39;contact.phone.area_code&#39; in &#39;field&#39; and &#39;cmp&#39; in &#39;type&#39;. To sort people according to when their records were last edited you put &#39;last_edited&#39; in &#39;field&#39; and &#39;date&#39; in &#39;type&#39;. The &#39;direction&#39; subfield can have either &#39;1&#39; for forwards or &#39;-1&#39; for backwards. Try putting a &#39;1&#39; first, and if that does not give the desired results come back and change it to &#39;-1&#39;.
+
+When you hit the &#39;create&#39; button, a new dtd and xml file will be generated for the category in the &#39;xmlSiteEngine/system/xml/&#39; directory.
+
+After you create a new category you will also have to create an index template, create a record template, and create a reference template for each browser version of the site.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+<how_to topic="edit a browser" record_number="how_to16">
+<subcategory name="administer" />
+<text>To edit a browser, go to the configure site page and follow the &#39;edit&#39; link next to the browser version you want to edit.
+
+If you want to change the name of the browser, you also have to go into the xmlSiteEngine/system/xml/ directory and change the name of the template file, so doing that is not recommended.
+
+The rest of the fields are the same as when you create a new browser.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+<how_to topic="edit a category" record_number="how_to17">
+<subcategory name="administer" />
+<text>To make changes to a category after you have created it, go to the configure site page. Follow the &#39;edit&#39; link next to the category you want to edit.
+
+Enter your name and password at the prompt. If you try to change the name of the category, the member title, or the member tyoe, you will also have to go and edit the category xml file in &#39;xmlSiteEngine/system/xml/&#39; to reflect those changes, which is not recommended. You can change the &#39;user&#39; subfield of the &#39;member&#39; category, and as new records are created they will be assigned passwords.
+
+The &#39;sort&#39; field can still be modified like when you create a new category.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+<how_to topic="add a new field to a category" record_number="how_to18">
+<subcategory rank="10" name="administer" />
+<text>To add a new field to a category, go to the configure site page.
+
+Fields that have no attributes or subfields will have a multi-line text box input. If a field has attributes, defined by entering a list of attribute names separated by a space in the &#39;attributes&#39; field, it will have a subfield with a single line text input for each attribute, but no multi-line text input. If a field has a subfield, it can still have attributes, but it will not have a multi-line text input.
+
+To create a new top-level field, follow the &#39;new field&#39; link next to the category you want to add a field to. To add a subfield to an existing field, follow the &#39;new child field&#39; link next to the field you want to add a subfield to. But be careful, because if a field has a multi-line text input, and you add a subfield to it, it will no longer have a multi-line text input, and any data that has been entered in records in that field will be lost. To add a single-line text input subfield to an existing field, follow the &#39;edit&#39; link next to that field and add a new attribute to the field, separated by a space from any existing attributes. Again, if the field you add an attribute to had a multi-line text input, it will be lost.
+
+All categories automatically have a title field if a title is defined when you create a new category, a &#39;record_number&#39; field, a &#39;subcategory&#39; field with &#39;name&#39; and &#39;rank&#39; subfields, and a &#39;last_edited&#39; field with &#39;month&#39;, &#39;day&#39;, &#39;year&#39; and &#39;by&#39; subfields. The title field and &#39;subcategory&#39; field will be visible when you edit a record. The &#39;record_number&#39; field is automatically assigned a value when you create a new record, and the filename of the page created for a record corresponds to its record number, for example if a person&#39;s record number is &#39;person2&#39;, then the filename of the page generated from their record will be &#39;person2.html&#39;. The &#39;last_edited&#39; field is automatically updated every time you edit a record, and stores the month, day, year, and name of the person who edited the record.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+
+
+
+
+
+<how_to topic="create a new subcategory" record_number="how_to19">
+<subcategory rank="1" name="use" />
+<text>To create a new subcategory, go to edit a record, and type the name of the new subcategory in the &#39;name&#39; subfield of the &#39;subcategory&#39; field. Subcategories are automatically generated from the record subcategory fields, and all the records with the same subcategory name will be in the same subcategory.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+<how_to topic="put a record in a subcategory" record_number="how_to20">
+<subcategory rank="1" name="use" />
+<text>To put a record in an existing subcategory, when you edit a record or create a new reccord, enter the name of the subcategory in the &#39;name&#39; subfield of the &#39;subcategory&#39; field.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="change the order in which subcategories appear on the page" record_number="how_to21">
+<subcategory rank="1" name="use" />
+<text>The order in which subcategories appear on the page is controlled by the values in the &#39;rank&#39; subfield of the &#39;subcategory&#39; field of the records in each subcategory. The rankings given in each record of a subcategory are averaged, and the subcategory with the highest rank (the closest to 0) appears first. For example, if you want a subcategory to appear last, edit a record in that subcategory and change the value in the subcategory rank field to &#39;10&#39; or &#39;100&#39;.</text>
+<authors>Mike Weller</authors>
+<last_edited month="2" day="28" by="administrator" year="2002" />
+</how_to>
+
+
+
+<how_to topic="create a reference template" record_number="how_to22">
+<subcategory name="administer" />
+<text>Reference templates control the appearance of references to a record in other records thet it mentions, as well as from the search results page. To create a new template, go to the configure site page, find the browser you want to create a reference template for, and follow the &#39;new template&#39; link.
+
+Enter your name and password at the prompt.
+
+The name of the template should be &#39;reference&#39; and the subcategory name should be the name of the category this is to be the reference template for.
+
+The template can include any html suitable for this browser version of the template, as well as the template tags described in &#39;edit an html template&#39;.</text>
+<authors>Mike Weller</authors>
+<last_edited month="3" day="5" by="administrator" year="2002" />
+</how_to>
+
+
+</record>

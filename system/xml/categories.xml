@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE record SYSTEM "categories.dtd">
+
+<record>
+
+<category record_number="category1" name="people">
+<member title="name" type="person" user="true" />
+<last_edited month="1" day="26" by="administrator" year="2002" />
+<sort direction="1" field="name" type="last" />
+</category>
+
+<category record_number="category2" name="how_to">
+<member title="topic" type="how_to" />
+<last_edited month="2" day="18" by="administrator" year="2002" />
+<sort direction="1" field="topic" />
+</category>
+
+
+
+</record>

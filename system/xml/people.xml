@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE record SYSTEM "people.dtd">
+
+<record>
+
+<person record_number="person1" name="administrator">
+<bio>This is the default person. The administrator&#39;s password is &#39;administrator&#39;. To begin to set up this site, first add a new person.</bio>
+<contact email="email@your.server.edu" />
+<web_page url="http://your.server.edu" />
+<picture url="../../system/images/people.gif" />
+<last_edited month="2" day="4" by="administrator" year="2002" />
+</person>
+
+
+
+
+
+
+
+
+
+
+
+
+</record>

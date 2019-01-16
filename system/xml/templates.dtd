@@ -1,0 +1,21 @@
+<!ELEMENT template (subcategory?,last_edited,html)>
+<!ATTLIST template
+	type		CDATA		#REQUIRED
+	record_number	ID		#REQUIRED
+>
+
+<!ELEMENT subcategory EMPTY>
+<!ATTLIST subcategory
+	name		CDATA		#REQUIRED
+	rank		CDATA		#IMPLIED
+>
+
+<!ELEMENT last_edited EMPTY>
+<!ATTLIST last_edited
+	month		CDATA		#REQUIRED
+	day		CDATA 		#REQUIRED
+	year		CDATA 		#REQUIRED
+	by		CDATA		#REQUIRED
+>
+
+<!ELEMENT html (#PCDATA)>

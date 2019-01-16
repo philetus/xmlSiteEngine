@@ -1,0 +1,71 @@
+
+<html>
+<head>
+<title>[ xmlSE . how to . create a new category ]</title>
+<meta http-equiv="expires" content="-1">
+<meta http-equiv= "pragma" CONTENT="no-cache">
+<meta name="ROBOTS" content="ALL">
+<meta name="description" content="xml site engine: liberty! equality! fraternity! web publishing!">
+<meta name="KEYWORDS" content="xml web publishing">
+</head>
+<body bgcolor="#000000" text="#00FF00" link="#00FF00" alink="#00FF00" vlink="#00CC00">
+<font face="courier new, courier, monotype">
+
+<p><font size="+3">[ <a href="./">xmlSE</a> . </font><font size="+2"><a href="how_to.html">how to</a> . </font><font size="+1"> create a new category ]</font>
+
+<a href="../../system/cgi-bin/edit.cgi">edit</a>
+
+
+</p>
+
+<blockquote>To create a new category, <a href="how_to2.html">go to the configure site page</a>. Follow the &#39;new&#39; link next to the category heading.<br />
+<br />
+Enter your name and password at the prompt.<br />
+<br />
+In the &#39;name&#39; field, enter the name of the new category. The name should not include any spaces or special characters.<br />
+<br />
+The &#39;member&#39; field has three subfields, &#39;type&#39;, &#39;title&#39; and &#39;user&#39;. The &#39;type&#39; subfield is required. Enter the singular name of a member of the category. For example, a member of the people category is a person. If you want records in this category to have titles, enter the name of the title in the &#39;title&#39; subfield. The title for a person record is &#39;name&#39;. Enter &#39;true&#39; in the &#39;user&#39; subfield if records in this category represent users that should have passwords to access the site.<br />
+<br />
+The &#39;sort&#39; field controls the way records in the category are sorted. Enter the field whose contents you want to sort the records by in the &#39;field&#39; subfield. In the &#39;type&#39; field you should enter which sorting algorithm you would like to use. The options are &#39;cmp&#39;, &#39;last&#39; or &#39;date&#39;. The &#39;cmp&#39; algorithm compares the contents of the field alphabetically or numerically. The &#39;last&#39; algorithm is the same as &#39;cmp&#39; except it compares only the last word in the string. The &#39;date&#39; algorithm sorts the records by date, when the field mentioned in &#39;field&#39; has the attributes &#39;month&#39;, &#39;day&#39;, and &#39;year&#39; and they are in &#39;mm.dd.yyyy&#39; format. So if you wanted to sort the people category by last name you would put &#39;name&#39; in the &#39;field&#39; subfield and &#39;last&#39; in the &#39;type&#39; subfield. To sort people by their phone area code you put &#39;contact.phone.area_code&#39; in &#39;field&#39; and &#39;cmp&#39; in &#39;type&#39;. To sort people according to when their records were last edited you put &#39;last_edited&#39; in &#39;field&#39; and &#39;date&#39; in &#39;type&#39;. The &#39;direction&#39; subfield can have either &#39;1&#39; for forwards or &#39;-1&#39; for backwards. Try putting a &#39;1&#39; first, and if that does not give the desired results come back and change it to &#39;-1&#39;.<br />
+<br />
+When you hit the &#39;create&#39; button, a new dtd and xml file will be generated for the category in the &#39;xmlSiteEngine/system/xml/&#39; directory.<br />
+<br />
+After you create a new category you will also have to <a href="how_to12.html">create an index template</a>, <a href="how_to13.html">create a record template</a>, and <a href="how_to22.html">create a reference template</a> for each browser version of the site.</blockquote>
+
+<ul>authors: Mike Weller</ul>
+
+
+
+
+<ul>how_to:
+<ul>
+
+<li><a href="../../browsers/lynx/how_to18.html">add a new field to a category</a>
+<ul>To add a new field to a category, go to the config...</ul></li>
+
+
+<li><a href="../../browsers/lynx/how_to7.html">control the appearance of the site</a>
+<ul>The xml site engine is set up to allow several dif...</ul></li>
+
+
+<li><a href="../../browsers/lynx/how_to13.html">create a record template</a>
+<ul>Record templates control the appearance of categor...</ul></li>
+
+
+<li><a href="../../browsers/lynx/how_to12.html">create an index template</a>
+<ul>Index templates control the appearance of category...</ul></li>
+
+
+<li><a href="../../browsers/lynx/how_to17.html">edit a category</a>
+<ul>To make changes to a category after you have creat...</ul></li>
+
+</ul></ul>
+
+
+<p>last updated 3.5.2002
+by <a href="person1.html">administrator</a>
+</p>
+
+</font>
+</body>
+</html>

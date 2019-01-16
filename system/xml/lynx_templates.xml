@@ -1,0 +1,400 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE record SYSTEM "templates.dtd">
+
+<record>
+
+<template type="index" record_number="lynx_template1">
+<last_edited month="1" day="26" by="administrator" year="2002" />
+<html>&lt;header title=&quot;[ xmlSE ]&quot; /&gt;
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ xmlSE ]&lt;/font&gt;&lt;/p&gt;
+&lt;p&gt;xml site engine&lt;/p&gt;
+&lt;blockquote&gt;&lt;font size=&quot;+2&quot;&gt;web publishing for everyone&lt;/font&gt;&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;a href=&quot;people.html&quot;&gt;people&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;how_to.html&quot;&gt;how to set up this site&lt;/a&gt;&lt;/p&gt;
+
+&lt;blockquote&gt;&lt;search /&gt;&lt;/blockquote&gt;
+
+# last edited
+&lt;if field=&quot;last_edited.year&quot;&gt;&lt;p&gt;last updated &lt;data field=&quot;last_edited.month&quot; /&gt;.&lt;data field=&quot;last_edited.day&quot; /&gt;.&lt;data field=&quot;last_edited.year&quot; /&gt;
+&lt;if field=&quot;last_edited.by&quot;&gt;by &lt;data field=&quot;last_edited.by&quot; /&gt;&lt;/if&gt;
+&lt;/p&gt;&lt;/if&gt;
+
+#footer
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+
+<template type="password" record_number="lynx_template3">
+<last_edited month="1" day="27" by="administrator" year="2002" />
+<html># header
+&lt;header title=&quot;[ xmlSE  &lt;if field=&quot;category&quot;&gt;. &lt;data field=&quot;category&quot; /&gt;&lt;/if&gt; &lt;if field=&quot;title&quot;&gt;. &lt;data field=&quot;form&quot; /&gt; &lt;data field=&quot;title&quot; /&gt;&lt;/if&gt; . verify password ]&quot; /&gt;
+
+# masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;../../browsers/lynx/&quot;&gt;xmlSE&lt;/a&gt; &lt;if field=&quot;category&quot;&gt;. &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;&lt;data field=&quot;category&quot; /&gt;&lt;/if&gt; &lt;if field=&quot;title&quot;&gt;. &lt;/font&gt;&lt;font size=&quot;+1&quot;&gt;&lt;data field=&quot;form&quot; /&gt; &lt;data field=&quot;title&quot; /&gt;&lt;/if&gt; . &lt;/font&gt;verify password ]&lt;/p&gt;
+
+# password form
+&lt;ul&gt;
+&lt;password /&gt;
+&lt;/ul&gt;
+
+# footer
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+
+
+
+
+
+
+<template type="form" record_number="lynx_template4">
+<last_edited month="2" day="18" by="administrator" year="2002" />
+<html>#header
+&lt;header title=&quot;[ xmlSE  &lt;if field=&quot;category&quot;&gt;. &lt;data field=&quot;category&quot; /&gt;&lt;/if&gt; &lt;if field=&quot;title&quot;&gt;. &lt;data field=&quot;form&quot; /&gt; &lt;data field=&quot;title&quot; /&gt;&lt;/if&gt; ]&quot; /&gt;
+
+#masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;../../browsers/lynx&quot;&gt;xmlSE&lt;/a&gt; &lt;if field=&quot;category&quot;&gt;. &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;&lt;data field=&quot;category&quot; /&gt;&lt;/if&gt; &lt;if field=&quot;title&quot;&gt;. &lt;/font&gt;&lt;font size=&quot;+1&quot;&gt;&lt;data field=&quot;form&quot; /&gt; &lt;data field=&quot;title&quot; /&gt;&lt;/if&gt; ]&lt;/font&gt;
+
+# administrators can configure site
+&lt;if field=&quot;status&quot;&gt;&lt;a href=&quot;config.cgi?browser=static&quot;&gt;configure site &lt;/a&gt;&lt;/if&gt;&lt;/p&gt;
+
+&lt;form /&gt;
+
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+<template type="index" record_number="lynx_template5">
+<subcategory name="people" />
+<last_edited month="1" day="27" by="administrator" year="2002" />
+<html># header
+&lt;header title=&quot;[ xmlSE . people ]&quot; /&gt;
+
+# masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;./&quot;&gt;xmlSE&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;people ]&lt;/font&gt;
+
+# link to new record form
+&lt;a href=&quot;../../system/cgi-bin/new.cgi&quot;&gt;new&lt;/a&gt;
+&lt;/p&gt;
+
+# description
+&lt;blockquote&gt;
+These are the people who are able to contribute to this site.
+&lt;/blockquote&gt;
+
+# stuff inside subcategory tag gets printed for each
+# subcategory
+&lt;subcategory&gt;
+&lt;br /&gt;
+&lt;if field=&quot;subcategory&quot;&gt;&lt;p&gt;&lt;font size=&quot;+2&quot;&gt;*&lt;data field=&quot;subcategory&quot; /&gt;&lt;/font&gt;&lt;/p&gt;&lt;/if&gt;
+&lt;ul&gt;
+
+# template for each record
+&lt;record&gt;
+
+&lt;p&gt;
+&lt;if field=&quot;picture.url&quot;&gt;&lt;img src=&quot;&lt;data field=&quot;picture.url&quot; /&gt;&quot; width=&quot;60&quot; /&gt;&lt;/if&gt;
+
+&lt;font size=&quot;+1&quot;&gt;&lt;a href=&quot;&lt;data field=&quot;record_number&quot; /&gt;.html&quot;&gt;&lt;data field=&quot;name&quot; /&gt;&lt;/a&gt;&lt;/font&gt;
+&lt;if field=&quot;contact.email&quot;&gt;&lt;ul&gt;email: &lt;a href=&quot;mailto:&lt;data field=&quot;contact.email&quot; /&gt;&quot;&gt;&lt;data field=&quot;contact.email&quot; /&gt;&lt;/a&gt;
+&lt;/ul&gt;&lt;/if&gt;
+&lt;/p&gt;
+
+&lt;/record&gt;
+
+&lt;/ul&gt;
+&lt;/subcategory&gt;
+
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+<template type="record" record_number="lynx_template6">
+<subcategory name="people" />
+<last_edited month="2" day="4" by="administrator" year="2002" />
+<html># header
+&lt;header title=&quot;[ xmlSE . people . &lt;data field=&quot;name&quot; /&gt; ]&quot; /&gt;
+
+# masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;./&quot;&gt;xmlSE&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;&lt;a href=&quot;people.html&quot;&gt;people&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+1&quot;&gt; &lt;data field=&quot;name&quot; /&gt; ]&lt;/font&gt;
+
+# link to edit record page
+&lt;a href=&quot;../../system/cgi-bin/edit.cgi&quot;&gt;edit&lt;/a&gt;
+
+# link to change password page
+&lt;a href=&quot;../../system/cgi-bin/password.cgi&quot;&gt;change password&lt;/a&gt;
+&lt;/p&gt;
+
+# bio
+&lt;if field=&quot;bio&quot;&gt;&lt;blockquote&gt;&lt;data field=&quot;bio&quot; /&gt;&lt;/blockquote&gt;&lt;/if&gt;
+
+
+# picture
+&lt;if field=&quot;picture.url&quot;&gt;&lt;img src=&quot;&lt;data field=&quot;picture.url&quot; /&gt;&quot; width=&quot;100&quot; alt=&quot;&lt;data field=&quot;name&quot; /&gt;&quot; /&gt;&lt;/if&gt;
+
+# web page
+&lt;if field=&quot;web_page.url&quot;&gt;&lt;ul&gt;web page: &lt;data field=&quot;web_page.url&quot; /&gt;&lt;/ul&gt;&lt;/if&gt;
+
+# email
+&lt;if field=&quot;contact.email&quot;&gt;&lt;ul&gt;email: &lt;a href=&quot;mailto:&lt;data field=&quot;contact.email&quot; /&gt;&quot;&gt;&lt;data field=&quot;contact.email&quot; /&gt;&lt;/a&gt;&lt;/ul&gt;&lt;/if&gt;
+
+# phone
+&lt;if field=&quot;contact.phone.suffix&quot;&gt;&lt;ul&gt;phone: &lt;data field=&quot;contact.phone.area_code&quot; /&gt;.&lt;data field=&quot;contact.phone.prefix&quot; /&gt;.&lt;data field=&quot;contact.phone.suffix&quot; /&gt;&lt;/ul&gt;&lt;/if&gt;
+
+# fax
+&lt;if field=&quot;contact.fax.suffix&quot;&gt;&lt;ul&gt;fax: &lt;data field=&quot;contact.fax.area_code&quot; /&gt;.&lt;data field=&quot;contact.fax.prefix&quot; /&gt;.&lt;data field=&quot;contact.fax.suffix&quot; /&gt;&lt;/ul&gt;&lt;/if&gt;
+
+# address
+&lt;if field=&quot;contact.address&quot;&gt;&lt;ul&gt;address:&lt;blockquote&gt;&lt;data field=&quot;contact.address&quot; /&gt;&lt;/blockquote&gt;&lt;/ul&gt;&lt;/if&gt;
+
+
+# references to other records that mention this one
+&lt;reference_category&gt;
+&lt;ul&gt;&lt;data field=&quot;category&quot; /&gt;:
+&lt;ul&gt;
+&lt;reference&gt;
+&lt;li&gt;&lt;data field=&quot;reference&quot; /&gt;&lt;/li&gt;
+&lt;/reference&gt;
+&lt;/ul&gt;&lt;/ul&gt;
+&lt;/reference_category&gt;
+
+# last edited
+&lt;if field=&quot;last_edited.month&quot;&gt;&lt;p&gt;last updated &lt;data field=&quot;last_edited.month&quot; /&gt;.&lt;data field=&quot;last_edited.day&quot; /&gt;.&lt;data field=&quot;last_edited.year&quot; /&gt;
+&lt;if field=&quot;last_edited.by&quot;&gt;by &lt;data field=&quot;last_edited.by&quot; /&gt;&lt;/if&gt;
+&lt;/p&gt;&lt;/if&gt;
+
+#footer
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+
+
+<template type="under_construction" record_number="lynx_template11">
+<last_edited month="1" day="26" by="Mike Weller" year="2002" />
+<html>&lt;header title=&quot;[ xmlSE . under construction ]&quot; /&gt;
+
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;./&quot;&gt;xmlSE&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;under construction ]&lt;/font&gt;&lt;/p&gt;
+
+&lt;h1&gt;This page is currently under construction.&lt;/h1&gt;
+
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+<template type="configure_site" record_number="lynx_template18">
+<last_edited month="1" day="27" by="administrator" year="2002" />
+<html># header
+&lt;header title=&quot;[ xmlSE . configure site ]&quot; /&gt;
+
+# masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;../../browsers/lynx&quot;&gt;xmlSE&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;configure site ]&lt;/font&gt;&lt;/p&gt;
+
+&lt;config /&gt;
+
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+
+
+<template type="build_site" record_number="lynx_template21">
+<last_edited month="1" day="27" by="administrator" year="2002" />
+<html>&lt;header title=&quot;[ xmlSE . build site ]&quot; /&gt;
+
+# masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;../../browsers/lynx/&quot;&gt;xmlSE&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;build site ]&lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+
+# finished building message
+&lt;p&gt;Record &lt;data field=&quot;do&quot; /&gt;d. Click button to rebuild site.&lt;/p&gt;
+&lt;p&gt;(It could take a while, clicking more than once won&#39;t help.)&lt;/p&gt;
+&lt;ul&gt;
+# build form
+&lt;form action=&quot;build.cgi&quot; method=&quot;POST&quot;&gt;
+&lt;input type=&quot;submit&quot; value=&quot;build&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;browser&quot; value=&quot;&lt;data field=&quot;browser&quot; /&gt;&quot; /&gt;
+&lt;input type=&quot;hidden&quot; name=&quot;category&quot; value=&quot;&lt;data field=&quot;category&quot; /&gt;&quot; /&gt;
+&lt;/form&gt;
+&lt;/ul&gt;&lt;/ul&gt;
+
+# footer
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+<template type="search" record_number="lynx_template22">
+<last_edited month="1" day="27" by="administrator" year="2002" />
+<html>#header
+&lt;header title=&quot;[ xmlSE  &lt;if field=&quot;string&quot;&gt;. search &lt;data field=&quot;category&quot; /&gt; for &lt;data field=&quot;string&quot; /&gt;&lt;/if&gt; ]&quot; /&gt;
+
+#masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;../../browsers/lynx&quot;&gt;xmlSE&lt;/a&gt; &lt;if field=&quot;string&quot;&gt;. &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt; search &lt;data field=&quot;category&quot; /&gt; for &lt;data field=&quot;string&quot; /&gt;&lt;/if&gt; ]&lt;/font&gt;&lt;/p&gt;
+
+# search results
+&lt;ul&gt;&lt;results /&gt;&lt;/ul&gt;
+
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+<template type="reference" record_number="lynx_template29">
+<subcategory name="people" />
+<last_edited month="1" day="27" by="administrator" year="2002" />
+<html>&lt;a href=&quot;../../browsers/lynx/&lt;data field=&quot;record_number&quot; /&gt;.html&quot;&gt;&lt;data field=&quot;name&quot; /&gt;&lt;/a&gt;</html>
+</template>
+
+
+<template type="index" record_number="lynx_template30">
+<subcategory name="how_to" />
+<last_edited month="2" day="8" by="administrator" year="2002" />
+<html># header
+&lt;header title=&quot;[ xmlSE . how to ]&quot; /&gt;
+
+# masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;./&quot;&gt;xmlSE&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;how to ]&lt;/font&gt;
+
+# link to new record form
+&lt;a href=&quot;../../system/cgi-bin/new.cgi&quot;&gt;new&lt;/a&gt;
+&lt;/p&gt;
+
+# description
+&lt;blockquote&gt;
+Instructions for xml site engine. If you have questions email &lt;a href=&quot;mailto:root@dmg.caup.washington.edu&quot;&gt;root@dmg.caup.washington.edu&lt;/a&gt;.
+&lt;/blockquote&gt;
+
+# stuff inside subcategory tag gets printed for each
+# subcategory
+&lt;subcategory&gt;
+&lt;br /&gt;
+&lt;if field=&quot;subcategory&quot;&gt;&lt;p&gt;&lt;font size=&quot;+2&quot;&gt;*&lt;data field=&quot;subcategory&quot; /&gt;&lt;/font&gt;&lt;/p&gt;&lt;/if&gt;
+&lt;ul&gt;
+
+# template for each record
+&lt;record&gt;
+
+&lt;p&gt;
+  &lt;a href=&quot;&lt;data field=&quot;record_number&quot; /&gt;.html&quot;&gt;&lt;data field=&quot;topic&quot; /&gt;&lt;/a&gt;
+  &lt;if field=&quot;text&quot;&gt;&lt;ul&gt;
+    &lt;data field=&quot;text&quot; length=&quot;50&quot; /&gt;
+  &lt;/ul&gt;&lt;/if&gt;
+&lt;/p&gt;
+
+&lt;/record&gt;
+
+&lt;/ul&gt;
+&lt;/subcategory&gt;
+
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<template type="record" record_number="lynx_template31">
+<subcategory name="how_to" />
+<last_edited month="2" day="1" by="administrator" year="2002" />
+<html># header
+&lt;header title=&quot;[ xmlSE . how to . &lt;data field=&quot;topic&quot; /&gt; ]&quot; /&gt;
+
+# masthead
+&lt;p&gt;&lt;font size=&quot;+3&quot;&gt;[ &lt;a href=&quot;./&quot;&gt;xmlSE&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+2&quot;&gt;&lt;a href=&quot;how_to.html&quot;&gt;how to&lt;/a&gt; . &lt;/font&gt;&lt;font size=&quot;+1&quot;&gt; &lt;data field=&quot;topic&quot; /&gt; ]&lt;/font&gt;
+
+# link to edit record page
+&lt;a href=&quot;../../system/cgi-bin/edit.cgi&quot;&gt;edit&lt;/a&gt;
+
+# link to change password page
+#&lt;a href=&quot;../../system/cgi-bin/password.cgi&quot;&gt;change password&lt;/a&gt;
+&lt;/p&gt;
+
+# text
+&lt;if field=&quot;text&quot;&gt;&lt;blockquote&gt;&lt;data field=&quot;text&quot; /&gt;&lt;/blockquote&gt;&lt;/if&gt;
+
+# authors
+&lt;if field=&quot;authors&quot;&gt;&lt;ul&gt;authors: &lt;data field=&quot;authors&quot; /&gt;&lt;/ul&gt;&lt;/if&gt;
+
+# see also
+&lt;if field=&quot;see_also&quot;&gt;&lt;ul&gt;see also: &lt;data field=&quot;see_also&quot; /&gt;&lt;/ul&gt;&lt;/if&gt;
+
+# references to other records that mention this one
+&lt;reference_category&gt;
+&lt;ul&gt;&lt;data field=&quot;category&quot; /&gt;:
+&lt;ul&gt;
+&lt;reference&gt;
+&lt;li&gt;&lt;data field=&quot;reference&quot; /&gt;&lt;/li&gt;
+&lt;/reference&gt;
+&lt;/ul&gt;&lt;/ul&gt;
+&lt;/reference_category&gt;
+
+# last edited
+&lt;if field=&quot;last_edited.month&quot;&gt;&lt;p&gt;last updated &lt;data field=&quot;last_edited.month&quot; /&gt;.&lt;data field=&quot;last_edited.day&quot; /&gt;.&lt;data field=&quot;last_edited.year&quot; /&gt;
+&lt;if field=&quot;last_edited.by&quot;&gt;by &lt;data field=&quot;last_edited.by&quot; /&gt;&lt;/if&gt;
+&lt;/p&gt;&lt;/if&gt;
+
+#footer
+&lt;footer /&gt;</html>
+</template>
+
+
+
+
+<template type="reference" record_number="lynx_template32">
+<subcategory name="how_to" />
+<last_edited month="2" day="1" by="administrator" year="2002" />
+<html>&lt;a href=&quot;../../browsers/lynx/&lt;data field=&quot;record_number&quot; /&gt;.html&quot;&gt;&lt;data field=&quot;topic&quot; /&gt;&lt;/a&gt;
+&lt;if field=&quot;text&quot;&gt;&lt;ul&gt;&lt;data field=&quot;text&quot; length=&quot;50&quot; /&gt;&lt;/ul&gt;&lt;/if&gt;</html>
+</template>
+
+
+
+</record>

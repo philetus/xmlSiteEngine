@@ -1,0 +1,23 @@
+<!ELEMENT browser (last_edited,user_agent,header,footer)>
+<!ATTLIST browser
+	name			CDATA		#REQUIRED
+	record_number		ID		#REQUIRED
+>
+
+<!ELEMENT last_edited EMPTY>
+<!ATTLIST last_edited
+	month		CDATA		#REQUIRED
+	day		CDATA 		#REQUIRED
+	year		CDATA 		#REQUIRED
+	by		CDATA		#REQUIRED
+>
+
+<!ELEMENT user_agent EMPTY>
+<!ATTLIST user_agent
+	default		(false)		#REQUIRED
+	regexp		CDATA 		#REQUIRED
+>
+
+<!ELEMENT header #PCDATA>
+
+<!ELEMENT footer #PCDATA>

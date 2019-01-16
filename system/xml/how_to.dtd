@@ -1,0 +1,24 @@
+<!ELEMENT subcategory EMPTY>
+<!ATTLIST subcategory
+	name	CDATA	#IMPLIED
+	rank	CDATA	#IMPLIED
+>
+
+<!ELEMENT text (#PCDATA)>
+
+<!ELEMENT authors (#PCDATA)>
+
+<!ELEMENT last_edited EMPTY>
+<!ATTLIST last_edited
+	month	CDATA	#IMPLIED
+	day	CDATA	#IMPLIED
+	by	CDATA	#IMPLIED
+	year	CDATA	#IMPLIED
+>
+
+<!ELEMENT how_to (subcategory,last_edited,text,authors)>
+<!ATTLIST how_to
+	topic	CDATA	#IMPLIED
+	record_number	CDATA	#IMPLIED
+>
+

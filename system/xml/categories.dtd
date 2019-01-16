@@ -1,0 +1,27 @@
+<!ELEMENT category (last_edited,member,sort?)>
+<!ATTLIST category
+	name		CDATA		#REQUIRED
+	record_number	CDATA 		#REQUIRED
+>
+
+<!ELEMENT last_edited EMPTY>
+<!ATTLIST last_edited
+	month		CDATA		#REQUIRED
+	day		CDATA 		#REQUIRED
+	year		CDATA 		#REQUIRED
+	by		CDATA		#REQUIRED
+>
+
+<!ELEMENT member EMPTY>
+<!ATTLIST member
+	type		CDATA 		#REQUIRED
+	title		CDATA 		#IMPLIED
+	user		(true|false)	#REQUIRED
+>
+
+<!ELEMENT sort EMPTY>
+<!ATTLIST sort
+	field		CDATA 		#REQUIRED
+	type		CDATA 		#REQUIRED
+	direction	CDATA 		#REQUIRED
+>

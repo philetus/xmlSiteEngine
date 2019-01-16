@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE passfile [
+
+<!ELEMENT user EMPTY>
+<!ATTLIST user
+	name			CDATA		#REQUIRED
+	password		CDATA		#REQUIRED
+>
+
+]>
+
+<passfile>
+<user name="administrator" password="administrator" />
+</passfile>

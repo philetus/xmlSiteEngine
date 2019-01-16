@@ -1,0 +1,55 @@
+
+<html>
+<head>
+<title>[ xmlSE . how to . create an index template ]</title>
+<meta http-equiv="expires" content="-1">
+<meta http-equiv= "pragma" CONTENT="no-cache">
+<meta name="ROBOTS" content="ALL">
+<meta name="description" content="xml site engine: liberty! equality! fraternity! web publishing!">
+<meta name="KEYWORDS" content="xml web publishing">
+</head>
+<body bgcolor="#000000" text="#00FF00" link="#00FF00" alink="#00FF00" vlink="#00CC00">
+<font face="courier new, courier, monotype">
+
+<p><font size="+3">[ <a href="./">xmlSE</a> . </font><font size="+2"><a href="how_to.html">how to</a> . </font><font size="+1"> create an index template ]</font>
+
+<a href="../../system/cgi-bin/edit.cgi">edit</a>
+
+
+</p>
+
+<blockquote>Index templates control the appearance of category index pages. When you <a href="how_to15.html">create a new category</a>, you also need to create an index template and <a href="how_to13.html">create a record template</a> for each browser version of your site.<br />
+<br />
+Index templates use the tags described in &#39;<a href="how_to6.html">edit an html template</a>&#39;, as well as &#39;&lt;subcategory&gt;...&lt;/subcategory&gt;&#39; and &#39;&lt;record&gt;...&lt;/record&gt;&#39; tags to indicate which portion of the template should be repeated for each subcategory, and for each record.<br />
+<br />
+Inside the &#39;&lt;subcategory&gt;...&lt;/subcategory&gt;&#39; tags, you can use &#39;&lt;data field=&quot;subcategory&quot; /&gt;&#39; tags to get the name of the subcategory and &#39;&lt;if field=&quot;subcategory&quot;&gt;...&lt;/if&gt;&#39; tags to only include a portion of the template when the subcategory has a name (the default subcategory contains all the records with a blank subcategory field and has no name). The contents of the subcategory tag will be repeated for each subcategory.<br />
+<br />
+Inside the &#39;&lt;record&gt;...&lt;/record&gt;&#39; tags you can use data and if tags to access the fields of each record. The contents of the record tag are repeated for each record in the category. When you <a href="how_to17.html">edit a category</a>, you can control which method is used to sort the records within a subcategory and also invert the order.<br />
+<br />
+To allow people to create new records for this category, you need to include the new record link, &#39;&lt;a href=&quot;../../system/cgi-bin/new.cgi&quot;&gt;new&lt;/a&gt;&#39;. The new record script will extract the category that the record is to be added to from the url of the page the link is on.</blockquote>
+
+<ul>authors: Mike Weller</ul>
+
+
+
+
+<ul>how_to:
+<ul>
+
+<li><a href="../../browsers/lynx/how_to15.html">create a new category</a>
+<ul>To create a new category, go to the configure site...</ul></li>
+
+
+<li><a href="../../browsers/lynx/how_to13.html">create a record template</a>
+<ul>Record templates control the appearance of categor...</ul></li>
+
+</ul></ul>
+
+
+<p>last updated 2.28.2002
+by <a href="person1.html">administrator</a>
+</p>
+
+</font>
+</body>
+</html>

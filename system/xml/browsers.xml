@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE record SYSTEM "browsers.dtd">
+
+<record>
+
+<browser record_number="browser1" name="lynx">
+<header>&lt;html&gt;
+&lt;head&gt;
+&lt;title /&gt;
+&lt;meta http-equiv=&quot;expires&quot; content=&quot;-1&quot;&gt;
+&lt;meta http-equiv= &quot;pragma&quot; CONTENT=&quot;no-cache&quot;&gt;
+&lt;meta name=&quot;ROBOTS&quot; content=&quot;ALL&quot;&gt;
+&lt;meta name=&quot;description&quot; content=&quot;xml site engine: liberty! equality! fraternity! web publishing!&quot;&gt;
+&lt;meta name=&quot;KEYWORDS&quot; content=&quot;xml web publishing&quot;&gt;
+&lt;/head&gt;
+&lt;body bgcolor=&quot;#000000&quot; text=&quot;#00FF00&quot; link=&quot;#00FF00&quot; alink=&quot;#00FF00&quot; vlink=&quot;#00CC00&quot;&gt;
+&lt;font face=&quot;courier new, courier, monotype&quot;&gt;</header>
+<user_agent default="true" />
+<last_edited month="1" day="26" by="administrator" year="2002" />
+<footer>&lt;/font&gt;
+&lt;/body&gt;
+&lt;/html&gt;</footer>
+</browser>
+
+
+
+
+</record>
